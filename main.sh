@@ -33,8 +33,8 @@ echo $__working_folder
 
 # functions
 update_ubuntu(){
-	apt-get update \
-	apt-get autoclean \
+	apt-get update
+	apt-get autoclean
 	apt-get --purge autoremove
 }
 
