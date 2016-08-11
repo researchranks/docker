@@ -12,7 +12,7 @@ __base="$( basename ${__file} .sh )"
 # github related variables
 __github_repository="harden-ubuntu-server"
 __github_username="researchranks"
-__working_folder=""
+__working_folder="$(pwd)"
 
 
 # Debug setup
@@ -26,8 +26,8 @@ set -o nounset
 set -o pipefail
 
 #debug
-echo $__dir ' --some data-- '
+echo $__working_folder
 
-git clone https://github.com/$__github_username/$__github_repository.git
+#git clone https://github.com/$__github_username/$__github_repository.git
 
 
