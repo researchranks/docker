@@ -25,5 +25,3 @@ echo $__dir
 
 # bash <(curl -s https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh)
 
-
- && bash main.sh

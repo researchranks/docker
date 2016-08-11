@@ -17,3 +17,16 @@
 ## commands already installed
  - `git`
  - 
+
+# Instructions:
+
+> Short URL
+
+ `git clone https://git.io/v6Bi9 && bash main.sh`
+
+
+> Full URL
+
+
+ `git clone https://github.com/researchranks/harden-ubuntu-server.git
+ && bash main.sh`
