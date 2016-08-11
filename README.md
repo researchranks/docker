@@ -5,6 +5,14 @@
 > GNU/Linux 4.4.0-31-generic x86_64
 
 
+## Disclaimer
+> 
+
+> Even if this script does some security related configuration I 
+
+> don't guarantee that your server will be secure after running it.
+
+
 ## Deployed On Digital Ocean 
  **_Smallest Droplet_** 
 
@@ -13,6 +21,8 @@
  - 512 MB / 1 CPU
  - 20 GB / SSD Disk
  - 1 TB / Transfer
+
+
 
 ## commands already installed
  - `git`
