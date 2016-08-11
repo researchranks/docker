@@ -18,6 +18,7 @@ set -o errtrace
 set -o nounset
 set -o pipefail
 
+echo 'done'
 
-bash <(curl -s https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh)
+# bash <(curl -s https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh)
 
