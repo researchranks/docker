@@ -13,5 +13,7 @@
  - 512 MB / 1 CPU
  - 20 GB / SSD Disk
  - 1 TB / Transfer
- - 
 
+## commands already installed
+ - `git`
+ - 
