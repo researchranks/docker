@@ -25,3 +25,6 @@ echo $__dir
 
 # bash <(curl -s https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh)
 
+# source <(curl -s https://git.io/v6B1K)
+
+# curl -L https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh | bash -s
