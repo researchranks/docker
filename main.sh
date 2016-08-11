@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+####  !/usr/bin/env bash
 # description: setup to harden ubuntu server
 # tests: digital ocean small instance
 # author: researchranks 08-11-2016
@@ -22,6 +24,10 @@ set -o nounset
 set -o pipefail
 
 echo $__dir
+
+
+
+# bash <(curl -s https://git.io/v6B1K)
 
 # bash <(curl -s https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh)
 
