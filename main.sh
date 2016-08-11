@@ -2,10 +2,10 @@
 # description: setup to harden ubuntu server
 # tests: digital ocean small instance
 # author: researchranks 08-11-2016
-
+# github: https://github.com/researchranks/harden-ubuntu-server
 
 # Set magic variables for current file, directory, os, etc.
-__dir="$(cd "$(dirname " ${BASH_SOURCE[0]}")" && pwd)"
+__dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 __file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
 __base="$( basename ${__file} .sh )"
 
@@ -28,6 +28,15 @@ set -o pipefail
 #debug
 echo $__working_folder
 
-#git clone https://github.com/$__github_username/$__github_repository.git
+#git clone  https://github.com/$__github_username/$__github_repository.git
 
 
+# functions
+update_ubuntu(){
+	apt-get update \
+	apt-get autoclean \
+	apt-get --purge autoremove
+}
+
+
+update_ubuntu
