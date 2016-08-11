@@ -1,6 +1,4 @@
-#!/bin/bash
-
-####  !/usr/bin/env bash
+#!/usr/bin/env bash
 # description: setup to harden ubuntu server
 # tests: digital ocean small instance
 # author: researchranks 08-11-2016
@@ -26,6 +24,7 @@ set -o pipefail
 echo $__dir
 
 
+# git clone https://github.com/researchranks/harden-ubuntu-server.git && cd /hardern-ubuntu-server
 
 # bash <(curl -s https://git.io/v6B1K)
 

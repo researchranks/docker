@@ -16,7 +16,8 @@
 
 ## commands already installed
  - `git`
- - 
+ - `curl`
+ - `wget`
 
 # Instructions:
 
