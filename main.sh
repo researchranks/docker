@@ -26,6 +26,8 @@ echo $__dir
 
 # curl -L https://git.io/v6B1K -o main.sh | bash
 
+# source <(curl -s https://raw.githubusercontent.com/researchranks/harden-ubuntu-server/master/main.sh)
+
 
 # git clone https://github.com/researchranks/harden-ubuntu-server.git && cd /hardern-ubuntu-server
 
