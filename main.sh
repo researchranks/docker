@@ -8,8 +8,12 @@
 __dir="$(cd "$(dirname " ${BASH_SOURCE[0]}")" && pwd)"
 __file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
 __base="$( basename ${__file} .sh )"
-__github_repo="harden-ubuntu-server"
-__github_user="researchranks"
+
+# github related variables
+__github_repository="harden-ubuntu-server"
+__github_username="researchranks"
+__working_folder=""
+
 
 # Debug setup
 # Exit on error. Append || true if you expect an error.
@@ -21,10 +25,9 @@ set -o errtrace
 set -o nounset
 set -o pipefail
 
+#debug
 echo $__dir ' --some data-- '
 
-# curl -s https://raw.githubusercontent.com/researchranks/harden-ubuntu-server/master/main.sh | bash
-
-# curl -s https://git.io/v6B1K | bash
+git clone https://github.com/$__github_username/$__github_repository.git
 
 

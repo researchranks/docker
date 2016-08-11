@@ -23,11 +23,9 @@
 
 > Short URL
 
- `git clone https://git.io/v6Bi9 && bash main.sh`
+ `bug: have not found a short url service that works the same as the full url`
 
 
 > Full URL
 
-
- `git clone https://github.com/researchranks/harden-ubuntu-server.git
- && bash main.sh`
+ `curl -s https://raw.githubusercontent.com/researchranks/harden-ubuntu-server/master/main.sh | bash`
