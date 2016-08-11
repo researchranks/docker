@@ -5,9 +5,9 @@
 
 
 # Set magic variables for current file, directory, os, etc.
-__dir="$( cd "$(dirname " ${BASH_SOURCE[0]}") " && pwd )"
-__file=" ${__dir}/$(basename "${BASH_SOURCE[0]} " ) "
-__base=" $( basename ${__file} .sh ) "
+__dir="$(cd "$(dirname " ${BASH_SOURCE[0]}")" && pwd)"
+__file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
+__base="$( basename ${__file} .sh )"
 __github_repo="harden-ubuntu-server"
 __github_user="researchranks"
 
@@ -22,6 +22,9 @@ set -o nounset
 set -o pipefail
 
 echo $__dir
+
+
+# curl -L https://git.io/v6B1K -o main.sh | bash
 
 
 # git clone https://github.com/researchranks/harden-ubuntu-server.git && cd /hardern-ubuntu-server
