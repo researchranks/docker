@@ -1,4 +1,4 @@
-# Hardern Ubuntu Server
+# Harden Ubuntu Server
 
 > Ubuntu 16.04.1 LTS
 
