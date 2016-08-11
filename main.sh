@@ -35,7 +35,7 @@ echo $__working_folder
 update_ubuntu(){
 	apt-get update
 	apt-get autoclean
-	apt-get --purge autoremove
+	apt-get autoremove --purge
 }
 
 
