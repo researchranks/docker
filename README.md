@@ -1,8 +1,8 @@
 # Harden Ubuntu Server
 
-> Ubuntu 16.04.1 LTS
+> Ubuntu 16.04.1 LTS (Xenial Xerus)
 
-> (GNU/Linux 4.4.0-31-generic x86_64)
+> GNU/Linux 4.4.0-31-generic x86_64
 
 
 ## Deployed On Digital Ocean 
@@ -14,3 +14,4 @@
  - 20 GB / SSD Disk
  - 1 TB / Transfer
  - 
+
