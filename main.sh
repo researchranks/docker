@@ -22,21 +22,9 @@ set -o nounset
 set -o pipefail
 
 echo $__dir ' --some data-- '
-# curl -L https://git.io/v6B1K -o main.sh | bash
 
-# source <(curl -s https://raw.githubusercontent.com/researchranks/harden-ubuntu-server/master/main.sh)
+# curl -s https://raw.githubusercontent.com/researchranks/harden-ubuntu-server/master/main.sh | bash
 
-
-# bash <(curl -s https://raw.githubusercontent.com/researchranks/harden-ubuntu-server/master/main.sh)
+# curl -s https://git.io/v6B1K | bash
 
 
-
-# git clone https://github.com/researchranks/harden-ubuntu-server.git && cd /hardern-ubuntu-server
-
-# bash <(curl -s https://git.io/v6B1K)
-
-# bash <(curl -s https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh)
-
-# source <(curl -s https://git.io/v6B1K)
-
-# curl -L https://raw.githubusercontent.com/researchranks /harden-ubuntu-server/master/main.sh | bash -s
