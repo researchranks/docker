@@ -8,7 +8,7 @@
 __dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 __file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
 __base="$( basename ${__file} .sh )"
-__tmp_path="$(mktemp --directory)"
+__tmp_path="$(mktemp --directory "$0")"
 
 # github related variables
 __github_repository="harden-ubuntu-server"
@@ -33,7 +33,6 @@ echo ${__dir}
 
 download_docker_repo(){
 	echo ${__tmp_path}
-	echo ${__dir}
 }
 
 
