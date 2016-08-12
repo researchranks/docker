@@ -32,6 +32,7 @@ echo ${__dir}
 download_docker_repo(){
 	echo ${__tmp_path}
 	cd ${__tmp_path}
+	
 	git clone  https://github.com/${__github_username}/${__github_repository}.git
 	
 	mv ${__github_repository}/.profile ~/
@@ -42,9 +43,11 @@ download_docker_repo(){
 
 # Custom Functions
 update_ubuntu(){
-	apt-get update
-	apt-get autoclean
-	apt-get autoremove --purge
+	apt-get update && \
+	apt-get upgrade -y
+	
+	apt-get autoremove --purge && \
+	apt-get autoclean -y
 }
 
 download_docker_repo
