@@ -53,9 +53,7 @@ update_ubuntu(){
 }
 
 
-install_firewall(){
-	
-}
+#install_firewall(){}
 
 install_docker(){
 	
