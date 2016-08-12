@@ -8,11 +8,11 @@
 __dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 __file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
 __base="$( basename ${__file} .sh )"
+__tmp_dir="$(mktemp --directory)"
 
 # github related variables
 __github_repository="harden-ubuntu-server"
 __github_username="researchranks"
-__working_folder="$(pwd)"
 
 
 # Debug setup
@@ -26,17 +26,29 @@ set -o nounset
 set -o pipefail
 
 #debug
-echo $__working_folder
-
-#git clone  https://github.com/$__github_username/$__github_repository.git
+echo ${__working_folder}
 
 
-# functions
+download_docker_repo(){
+	cd ${__tmp_dir}
+	echo ${__dir}
+	# git clone  https://github.com/${__github_username}/${__github_repository}.git
+}
+
+
+# Custom Functions
 update_ubuntu(){
 	apt-get update
 	apt-get autoclean
 	apt-get autoremove --purge
 }
 
+update_profile(){
+	
+}
 
-update_ubuntu
+# Run Functions
+
+download_docker_repo()
+
+
