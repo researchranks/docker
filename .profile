@@ -15,6 +15,11 @@ export TERM=xterm
 
 
 # Custom Functions
+local_ip(){
+	ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+}
+
+
 ip_address(){
 	/sbin/ifconfig eth0 | \
 	grep 'inet addr:' | \
@@ -42,6 +47,8 @@ list_all(){
 
 # Custom Aliases
 alias ip-address=ip_address
+alias localip=local_ip
+
 alias update=update_profile
 alias ls=list_all
 
