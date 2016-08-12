@@ -38,4 +38,8 @@
 
 > Full URL
 
- `curl -s https://raw.githubusercontent.com/researchranks/harden-ubuntu-server/master/main.sh | bash`
+ `curl -s https://raw.githubusercontent.com/researchranks/docker/master/main.sh | bash`
+
+> Live URL
+
+`curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/researchranks/docker/master/main.sh | bash`
