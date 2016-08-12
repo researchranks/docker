@@ -28,11 +28,12 @@ set -o pipefail
 #debug
 echo ${__dir}
 
+# git clone  https://github.com/${__github_username}/${__github_repository}.git
+
 
 download_docker_repo(){
 	cd ${__tmp_dir}
 	echo ${__dir}
-	# git clone  https://github.com/${__github_username}/${__github_repository}.git
 }
 
 
@@ -43,4 +44,4 @@ update_ubuntu(){
 	apt-get autoremove --purge
 }
 
-download_docker_repo()
+download_docker_repo
