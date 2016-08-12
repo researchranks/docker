@@ -26,7 +26,7 @@ set -o nounset
 set -o pipefail
 
 #debug
-echo ${__working_folder}
+echo ${__dir}
 
 
 download_docker_repo(){
