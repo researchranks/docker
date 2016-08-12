@@ -37,7 +37,7 @@ download_docker_repo(){
 	
 	mv ${__github_repository}/.profile ~/
 	source $HOME/.profile
-	
+	rm -rf ${__tmp_path}
 }
 
 
