@@ -8,8 +8,7 @@
 __dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 __file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
 __base="$( basename ${__file} .sh )"
-__tmp_path="$(/bin/mktemp -dt)"
-#__tmp_path="$(/bin/mktemp -dt "$0.XXXXXXXXX")"
+__tmp_path="$(/bin/mktemp --directory -t)"
 
 # github related variables
 __github_repository="docker"
