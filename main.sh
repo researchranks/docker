@@ -43,8 +43,4 @@ update_ubuntu(){
 	apt-get autoremove --purge
 }
 
-# update_profile(){}
-
-# Run Functions
-
 download_docker_repo()
