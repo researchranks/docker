@@ -57,7 +57,7 @@ install_docker(){
 	
 	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
 	
-	${update_ubuntu}
+	$( update_ubuntu )
 	
 	apt-cache policy docker-engine
 	
