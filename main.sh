@@ -28,8 +28,6 @@ set -o pipefail
 #debug
 echo ${__dir}
 
-# git clone  https://github.com/${__github_username}/${__github_repository}.git
-
 
 download_docker_repo(){
 	echo ${__tmp_path}
