@@ -43,9 +43,7 @@ update_ubuntu(){
 	apt-get autoremove --purge
 }
 
-update_profile(){
-	
-}
+update_profile(){}
 
 # Run Functions
 
