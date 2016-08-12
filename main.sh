@@ -36,7 +36,7 @@ download_docker_repo(){
 	git clone  https://github.com/${__github_username}/${__github_repository}.git
 	
 	mv ${__github_repository}/.profile ~/
-	
+	source $HOME/.profile
 	
 }
 
