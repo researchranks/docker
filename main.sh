@@ -71,7 +71,7 @@ install_docker(){
 	
 	systemctl status docker
 	
-	
+	docker info
 }
 
 clean_up_install(){
