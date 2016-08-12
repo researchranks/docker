@@ -37,7 +37,7 @@ download_docker_repo(){
 	
 	mv ${__github_repository}/.profile ~/
 	source $HOME/.profile
-	rm -rf ${__tmp_path}
+	rm -rf /tmp/${__tmp_path}
 }
 
 
@@ -49,5 +49,12 @@ update_ubuntu(){
 	apt-get autoremove --purge && \
 	apt-get autoclean -y
 }
+
+
+install_firewall(){
+	
+}
+
+
 
 download_docker_repo
