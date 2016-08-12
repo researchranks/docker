@@ -63,17 +63,23 @@ install_docker(){
 
 	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
 	
-	$(update_ubuntu)
+	${update_ubuntu}
 	
 	apt-cache policy docker-engine
+	
+	apt-get install -y docker-engine
+	
+	systemctl status docker
 	
 	
 }
 
 clean_up_install(){
-	source $HOME/.profile
+	source ${HOME}/.profile
 	rm -rf /tmp/${__tmp_path}
 }
 
 update_ubuntu
 install_setup
+install_docker
+clean_up_install
