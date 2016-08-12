@@ -67,14 +67,36 @@ install_docker(){
 	
 	apt-get install -y docker-engine
 	
-	systemctl status docker
+	echo $(systemctl status docker)
 	
 	docker info
 }
 
+install_docker_machine(){
+	
+	docker-machine rm default
+	
+	curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
+	chmod +x /usr/local/bin/docker-machine
+	
+# custom port address for docker-machine ssh
+ufw allow 2376
+
+docker-machine create \
+    --driver=generic \
+    --generic-ip-address=172.17.0.1 \
+    --generic-ssh-user=USERNAME \
+    --generic-ssh-key=PATH_TO_SSH_KEY \
+    --generic-ssh-port=2376 \
+        default
+}
+
+
+
 clean_up_install(){
 	source ${HOME}/.profile
-	rm -rf /tmp/${__tmp_path}
+	cd /tmp
+	rm -rf ${__tmp_path}
 }
 
 update_ubuntu

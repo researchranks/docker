@@ -5,26 +5,27 @@
 # 3: ~/.profile (default)
 
 # Custom Variables
-__dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 __file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
+
+__dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 __base="$( basename ${__file} .sh )"
 __tmp_dir="$(mktemp --directory)"
+
+__local_ip=$(local_ip)
+__ip=$(ip_address)
 
 # Custom Paths
 export TERM=xterm
 
-
 # Custom Functions
 local_ip(){
-	ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+	ifconfig | perl -nle 's/dr:(\S+)/print $1/e' | sed -n '1p'
 }
 
 
 ip_address(){
-	/sbin/ifconfig eth0 | \
-	grep 'inet addr:' | \
-	cut -d: -f2 | \
-	awk '{ print $1}'
+	curl ipinfo.io/ip
 }
 
 update_profile(){
