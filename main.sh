@@ -32,7 +32,7 @@ echo ${__dir}
 
 
 download_docker_repo(){
-	echo ${__tmp_dir}
+	echo ${__tmp_path}
 	echo ${__dir}
 }
 
