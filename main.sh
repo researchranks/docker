@@ -80,17 +80,23 @@ install_docker_machine(){
 	chmod +x /usr/local/bin/docker-machine
 	
 # custom port address for docker-machine ssh
-ufw allow 2376
+# ufw allow 2376
 
-docker-machine create \
-    --driver=generic \
-    --generic-ip-address=172.17.0.1 \
-    --generic-ssh-user=USERNAME \
-    --generic-ssh-key=PATH_TO_SSH_KEY \
-    --generic-ssh-port=2376 \
-        default
+# --generic-ssh-user=USERNAME \
+# --generic-ssh-key=PATH_TO_SSH_KEY \
+
+# 
+# docker-machine create \
+#     --driver=generic \
+#     --generic-ip-address=172.17.0.1 \
+#     --generic-ssh-port=2376 \
+# 	default
 }
 
+install_docker_compose(){
+	apt-get -y install python-pip
+	apt install docker-compose
+}
 
 
 clean_up_install(){

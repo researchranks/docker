@@ -23,6 +23,10 @@ local_ip(){
 	ifconfig | perl -nle 's/dr:(\S+)/print $1/e' | sed -n '1p'
 }
 
+ip_debug(){
+	ip -o addr | awk '!/^[0-9]*: ?lo|link\/ether/ {gsub("/", " "); print $2" "$4}'
+}
+
 
 ip_address(){
 	curl ipinfo.io/ip
