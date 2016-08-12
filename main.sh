@@ -35,7 +35,7 @@ echo ${__dir}
 download_docker_repo(){
 	echo ${__tmp_path}
 	cd ${__tmp_path}
-	echo ${__dir}
+	touch index.html
 }
 
 
