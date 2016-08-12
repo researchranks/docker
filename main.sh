@@ -12,7 +12,7 @@ __tmp_path="$(/bin/mktemp -dt)"
 #__tmp_path="$(/bin/mktemp -dt "$0.XXXXXXXXX")"
 
 # github related variables
-__github_repository="harden-ubuntu-server"
+__github_repository="docker"
 __github_username="researchranks"
 
 
@@ -35,7 +35,8 @@ echo ${__dir}
 download_docker_repo(){
 	echo ${__tmp_path}
 	cd ${__tmp_path}
-	touch index.html
+	git clone  https://github.com/${__github_username}/${__github_repository}.git
+	
 }
 
 
