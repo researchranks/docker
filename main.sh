@@ -99,7 +99,7 @@ install_docker_compose(){
 install_docker_wordpress(){
 	cd ~/
 	git clone https://github.com/researchranks/docker-wordpress.git
-	cd /docker-wordpress
+	cd ~/docker-wordpress
 	docker-compose up
 }
 
