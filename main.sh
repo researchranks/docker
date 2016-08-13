@@ -42,7 +42,6 @@ install_setup(){
 	
 }
 
-
 # Custom Functions
 update_ubuntu(){
 	apt-get update && \
@@ -57,18 +56,13 @@ install_docker(){
 	
 	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
 	
-	apt-get update && \
-	apt-get upgrade -y
-	
-	apt-get autoremove --purge && \
-	apt-get autoclean -y
+	$(update_ubuntu)
 	
 	apt-cache policy docker-engine
-	
 	apt-get install -y docker-engine
 	
 	echo $(systemctl status docker)
-	
+	echo '-- docker up --'
 	docker info
 }
 
@@ -95,9 +89,15 @@ install_docker_machine(){
 
 install_docker_compose(){
 	apt-get -y install python-pip
-	apt install docker-compose
+	apt install docker-compose -y
 }
 
+install_docker_wordpress(){
+	cd ~/
+	git clone https://github.com/researchranks/docker-wordpress.git
+	cd /docker-wordpress
+	docker-compose up
+}
 
 clean_up_install(){
 	source ${HOME}/.profile
