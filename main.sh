@@ -109,4 +109,5 @@ update_ubuntu
 install_setup
 install_docker
 install_docker_compose
+install_docker_wordpress
 clean_up_install
