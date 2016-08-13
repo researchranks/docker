@@ -108,4 +108,5 @@ clean_up_install(){
 update_ubuntu
 install_setup
 install_docker
+install_docker_compose
 clean_up_install
